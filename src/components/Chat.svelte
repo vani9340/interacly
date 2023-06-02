@@ -23,7 +23,7 @@
     }
   </script>
   
-  <main class="flex flex-col justify-between p-4  rounded shadow">
+  <main class="flex flex-col justify-between p-4  rounded shadow  overflow-y-scroll">
     <ul id="chat-container" class="space-y-4">
       {#each messages as message, index}
         <li
@@ -52,11 +52,11 @@
       {/each}
     </ul>
   
-    <form class="sticky bottom-4 mt-4 flex h-1/6" on:submit|preventDefault={sendMessage}>
+    <form class="sticky bottom-6 mt-4 flex h-1/6" on:submit|preventDefault={sendMessage}>
       <div
       class="sticky w-full px-2 py-1 bg-white rounded-lg border-[#0068C9] border shadow-md shadow-interacly-blue-1/20 flex items-center">
       <textarea
-        class="appearance-none bg-transparent border-none focus:ring-0 w-full resize-none h-full"
+        class="appearance-none bg-transparent border-none focus:ring-0 w-full resize-none h-full placeholder:text-[#AFAFAF]"
         placeholder="Type your message..." 
         bind:value={newMessage}/>
      <div class='flex flex-col gap-2'>

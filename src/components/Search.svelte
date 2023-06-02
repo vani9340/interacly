@@ -13,7 +13,11 @@
 
 <div class='flex flex-col gap-0.5 overflow-y-scroll'>
     {#each Search as data, index}
-    <div class='bg-Box_grey hover:bg-[#424242] hover:text-white opacity-40 hover:opacity-100 text-center p-3 text-md font-medium '>
+    <div class='bg-Box_grey hover:bg-[#424242] hover:text-white opacity-40 hover:opacity-60 text-center p-3 text-md font-medium'
+    class:bg-[#424242] ={data == 'Books'}
+    class:text-white={data == 'Books'}
+    class:opacity-100 ={data == 'Books'}
+    >
        {data}
     </div>
 {/each}
